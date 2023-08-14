@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return an array</title>
+</head>
+<body>
+    <!-- 4.Create a function that will return an array with words inside a text
+ -->
+ <script>
+    function arrayWithWords(text){
+        // spilts the text in to array of words
+        let words = text.split(/\s+/);
+
+        return words;
+    }
+    // Declaring input text
+    const words = " this is words to extract in to text";
+    const wordArray = arrayWithWords(words);
+    console.log(wordArray);
+ </script>
+</body>
+</html>

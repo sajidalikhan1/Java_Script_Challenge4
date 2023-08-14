@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string to array chareters</title>
+  </head>
+  <body>
+    <!-- 6.Create a function that converts a string to an array of characters
+ -->
+    <script>
+      function stringToArray(String) {
+        // Use to convert the string to an array of characters
+        var charArray = [...String];
+
+        return charArray;
+      }
+      // declaring input
+      var string = "Hello, javascript";
+      var charArray = stringToArray(string);
+      console.log(charArray);
+    </script>
+  </body>
+</html>

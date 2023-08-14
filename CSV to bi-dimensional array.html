@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV to bi-demensional array</title>
+  </head>
+  <body>
+    <!-- 4.Create a function to convert a CSV text to a “bi-dimensional” array
+ -->
+    <script>
+      function csvTo2DArray(csvText) {
+        // Split the CSV text into an array of lines
+        var lines = csvText.split("\n");
+
+        var result = [];
+
+        // Iterate  each line in the CSV
+        for (var i = 0; i < lines.length; i++) {
+          var values = lines[i].split(",");
+
+          result.push(values);
+        }
+
+        return result;
+      }
+
+      var csvInput = "1,John,Doe\n2,Jane,Smith\n3,Michael,Johnson";
+      var array2D = csvTo2DArray(csvInput);
+      console.log(array2D);
+    </script>
+  </body>
+</html>

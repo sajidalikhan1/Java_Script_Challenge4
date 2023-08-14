@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>number of words</title>
+  </head>
+  <body>
+    <!-- 1 A. Create a function that will return the number of words in a text
+-->
+    <script>
+      function countWords(text) {
+        text = text.trim();
+
+        if (text === "") {
+          return 0;
+        }
+
+        // Split the text into an array
+        var words = text.split(/\s+/);
+
+        // Return the length of array
+        return words.length;
+      }
+
+      let inputText = "This is an good programming language used in front-end";
+      var wordCount = countWords(inputText);
+      console.log("Number of words:", wordCount);
+    </script>
+  </body>
+</html>

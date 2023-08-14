@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum of delimented strings</title>
+  </head>
+  <body>
+    <!-- 3.Calculate the sum of numbers received in a comma delimited string -->
+    <script>
+      function calculateSum(numbersString) {
+        let numberStrings = numbersString.split(",");
+
+        let sum = 0;
+
+        for (let i = 0; i < numberStrings.length; i++) {
+          // Convert the number of string to a floating-point number
+          sum += Number(numberStrings[i]);
+        }
+
+        return sum;
+      }
+
+      // declaring input
+      let inputNumbers = "2, 10, 4, 8";
+      let total = calculateSum(inputNumbers);
+      console.log("Total sum:", total);
+    </script>
+  </body>
+</html>

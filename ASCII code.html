@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII</title>
+  </head>
+  <body>
+    <!-- 7.Create a function that will convert a string in an array containing the ASCII codes of each character
+ -->
+    <script>
+      function stringToAsciiArray(inputString) {
+        var asciiArray = [];
+
+        for (var i = 0; i < inputString.length; i++) {
+          // Get the ASCII code of the current character
+          var asciiCode = inputString.charCodeAt(i);
+
+          // Add the ASCII code to the array
+          asciiArray.push(asciiCode);
+        }
+
+        return asciiArray;
+      }
+
+      var givenString = "These is a good thing";
+      var asciiArray = stringToAsciiArray(givenString);
+      console.log(asciiArray);
+    </script>
+  </body>
+</html>

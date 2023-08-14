@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceaser Cipher</title>
+  </head>
+  <body>
+    <!-- 9.Implement the Caesar cypher-->
+
+    <script>
+      
+
+      // Function that implements the Caesar cipher
+      function ceaserCipher(txt) {
+        let encryptedText = "";
+
+        // Loop through each character in the input text
+        for (let i = 0; i < txt.length; i++) {
+          let char = txt[i];
+          // Check if the character is not a space
+          if (char !== " ") {
+            // Get the Unicode code point of the character and shift it by 3 positions
+            let shiftedCharCode = char.charCodeAt(0) + 3;
+
+            // Convert the shifted character code back to a character
+            let encryptedChar = String.fromCharCode(shiftedCharCode);
+            // Add the encrypted character to the encrypted text
+            encryptedText += encryptedChar;
+          } else {
+            // Keep spaces unchanged
+            encryptedText += " ";
+          }
+        }
+
+        return encryptedText;
+      }
+
+      const text = "hello world";
+      const encryptedText = ceaserCipher(text);
+      console.log(encryptedText);
+    </script>
+  </body>
+</html>
